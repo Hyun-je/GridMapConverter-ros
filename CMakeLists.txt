@@ -83,9 +83,7 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-#add_executable(grid_map_publisher
-#  src/grid_map_publisher.cpp
-#)
+add_executable(image_converter src/image_converter.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -101,7 +99,7 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
-#target_link_libraries(grid_map_publisher ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(image_converter ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 
 #############
